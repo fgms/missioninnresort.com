@@ -1,0 +1,1 @@
+<?php wp_redirect( site_url('../404'), 301 ); exit; ?>
