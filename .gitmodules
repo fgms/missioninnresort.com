@@ -1,0 +1,3 @@
+[submodule "wp-content/themes/wp-theme-twig"]
+	path = wp-content/themes/wp-theme-twig
+	url = https://github.com/fgms/wp-theme-twig
