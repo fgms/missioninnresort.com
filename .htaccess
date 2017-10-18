@@ -1,0 +1,326 @@
+RewriteEngine On
+RewriteBase /
+
+
+<IfModule mod_deflate.c>
+    <FilesMatch "\.(css|htm|html|js|php|txt|xml)$">
+        SetOutputFilter DEFLATE
+    </FilesMatch>
+</IfModule>
+
+SetOutputFilter DEFLATE 
+Addtype font/opentype .otf
+Addtype font/truetype .ttf
+AddOutputFilterByType DEFLATE font/opentype font/truetype text/javascript
+
+#COMPRESSION
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-javascript
+
+
+## STOP REFERRER SPAM ##
+SetEnvIfNoCase Referer 4webmasters.org spambot=yes
+SetEnvIfNoCase Referer 7makemoneyonline.com spambot=yes
+SetEnvIfNoCase Referer acads.net spambot=yes
+SetEnvIfNoCase Referer adcash.com spambot=yes
+SetEnvIfNoCase Referer addons.mozilla.org/en-US/firefox/addon/ilovevitaly/ spambot=yes
+SetEnvIfNoCase Referer aliexpress.com spambot=yes
+SetEnvIfNoCase Referer anal-acrobats.hol.es spambot=yes
+SetEnvIfNoCase Referer anticrawler.org spambot=yes
+SetEnvIfNoCase Referer best-seo-offer.com spambot=yes
+SetEnvIfNoCase Referer best-seo-solution.com spambot=yes
+SetEnvIfNoCase Referer bestwebsitesawards.com spambot=yes
+SetEnvIfNoCase Referer blackhatworth.com spambot=yes
+SetEnvIfNoCase Referer brakehawk.com spambot=yes
+SetEnvIfNoCase Referer buttons-for-website.com spambot=yes
+SetEnvIfNoCase Referer buttons-for-your-website.com spambot=yes
+SetEnvIfNoCase Referer buy-cheap-online.info spambot=yes
+SetEnvIfNoCase Referer cenokos.ru spambot=yes
+SetEnvIfNoCase Referer cenoval.ru spambot=yes
+SetEnvIfNoCase Referer cityadspix.com spambot=yes
+SetEnvIfNoCase Referer darodar.com spambot=yes
+SetEnvIfNoCase Referer domination.ml spambot=yes
+SetEnvIfNoCase Referer econom.co spambot=yes
+SetEnvIfNoCase Referer edakgfvwql.ru spambot=yes
+SetEnvIfNoCase Referer event-tracking.com spambot=yes
+SetEnvIfNoCase Referer forum69.info spambot=yes
+SetEnvIfNoCase Referer free-share-buttons.com spambot=yes
+SetEnvIfNoCase Referer free-social-buttons.com spambot=yes
+SetEnvIfNoCase Referer Get-Free-Traffic-Now.com spambot=yes
+SetEnvIfNoCase Referer gobongo.info spambot=yes
+SetEnvIfNoCase Referer googlsucks.com spambot=yes
+SetEnvIfNoCase Referer guardlink.org spambot=yes
+SetEnvIfNoCase Referer hulfingtonpost.com spambot=yes
+SetEnvIfNoCase Referer humanorightswatch.org spambot=yes
+SetEnvIfNoCase Referer ilovevitaly.co spambot=yes
+SetEnvIfNoCase Referer ilovevitaly.com spambot=yes
+SetEnvIfNoCase Referer ilovevitaly.ru spambot=yes
+SetEnvIfNoCase Referer iminent.com spambot=yes
+SetEnvIfNoCase Referer iskalko.ru spambot=yes
+SetEnvIfNoCase Referer kabbalah-red-bracelets.com spambot=yes
+SetEnvIfNoCase Referer kambasoft.com spambot=yes
+SetEnvIfNoCase Referer luxup.ru spambot=yes
+SetEnvIfNoCase Referer makemoneyonline.com spambot=yes
+SetEnvIfNoCase Referer masterseek.com spambot=yes
+SetEnvIfNoCase Referer myftpupload.com spambot=yes
+SetEnvIfNoCase Referer o-o-6-o-o.com spambot=yes
+SetEnvIfNoCase Referer o-o-6-o-o.ru spambot=yes
+SetEnvIfNoCase Referer o-o-8-o-o.ru spambot=yes
+SetEnvIfNoCase Referer ok.ru spambot=yes
+SetEnvIfNoCase Referer pornhub-forum.ga spambot=yes
+SetEnvIfNoCase Referer pornhub-forum.uni.me spambot=yes
+SetEnvIfNoCase Referer priceg.com spambot=yes
+SetEnvIfNoCase Referer prlog.ru spambot=yes
+SetEnvIfNoCase Referer ranksonic.info spambot=yes
+SetEnvIfNoCase Referer ranksonic.org spambot=yes
+SetEnvIfNoCase Referer rapidgator-porn.ga spambot=yes
+SetEnvIfNoCase Referer sanjosestartups.com spambot=yes
+SetEnvIfNoCase Referer savetubevideo.com spambot=yes
+SetEnvIfNoCase Referer screentoolkit.com spambot=yes
+SetEnvIfNoCase Referer semalt.com spambot=yes
+SetEnvIfNoCase Referer seoexperimenty.ru spambot=yes
+SetEnvIfNoCase Referer sexyteens.hol.es spambot=yes
+SetEnvIfNoCase Referer simple-share-buttons.com spambot=yes
+SetEnvIfNoCase Referer slftsdybbg.ru spambot=yes
+SetEnvIfNoCase Referer smailik.org spambot=yes
+SetEnvIfNoCase Referer social-buttons.com spambot=yes
+SetEnvIfNoCase Referer socialseet.ru spambot=yes
+SetEnvIfNoCase Referer superiends.org spambot=yes
+SetEnvIfNoCase Referer theguardlan.com spambot=yes
+SetEnvIfNoCase Referer vodkoved.ru spambot=yes
+SetEnvIfNoCase Referer webmaster-traffic.com spambot=yes
+SetEnvIfNoCase Referer websocial.me spambot=yes
+SetEnvIfNoCase Referer ykecwqlixx.ru spambot=yes
+SetEnvIfNoCase Referer youporn-forum.ga spambot=yes
+SetEnvIfNoCase Referer youporn-forum.uni.me spambot=yes
+SetEnvIfNoCase Referer trafficmonetize.org spambot=yes
+SetEnvIfNoCase Referer непереводимая.рф spambot=yes
+
+Order allow,deny
+Allow from all
+Deny from env=spambot
+## STOP REFERRER SPAM ##
+
+
+
+RewriteCond %{HTTP_HOST} .
+RewriteCond %{HTTP_HOST} !^staging\.missioninnresort\.com [NC]
+RewriteRule (.*) http://staging.missioninnresort.com/$1 [R=301,L]
+
+#this is the wordpress rewrites
+
+RewriteRule ^golf/golf-packages/details/([a-zA-Z0-9_-]+) golf/golf-packages/details/&permalink=$1 [L,QSA]
+RewriteRule ^tennis/orlando-tennis-packages-specials/details/([a-zA-Z0-9_-]+) tennis/orlando-tennis-packages-specials/details/&permalink=$1 [L,QSA]
+RewriteRule ^the-resort(.*) resort$1 [L,R=301]
+RewriteRule ^resort/orlando-vacation-packages/details/([a-zA-Z0-9_-]+) resort/orlando-vacation-packages/details/&permalink=$1 [L,QSA]
+
+
+#this is the site rewrites / moved urls
+
+#Landing Pages
+RewriteRule ^N.Y.Special golf/golf-packages/ [L,R=301]
+RewriteRule ^Preferred_Reservations.html marketing/preferred-reservations.html [L,R=301]
+RewriteRule ^marketing/FSAE_MissionInnResort_1.14.html marketing/fsae-1.14.html [L,R=301]
+RewriteRule ^marketing/AdventureLearningFAM_2.7.14.html marketing/adventure-learning-fam-2.11.14.html [L,R=301]
+RewriteRule ^marketing/AdventureLP_2.11.14.html marketing/adventure-learning-p-2.11.14.html [L,R=301]
+RewriteRule ^marketing/MI_GoldenMeetingPKG_3.14.html marketing/golden-meeting-package-3.14.html [L,R=301]
+RewriteRule ^marketing/MI_GoldenMeetingPKG_3.14_KS.html marketing/golden-meeting-package-3.14-ks.html [L,R=301]
+RewriteRule ^ggga http://www.missioninnresort.com/stay-play-train/ [L,R=301]
+RewriteRule ^innSTYLE http://www.missioninnresort.com/marketing/wedding-showcase/  [L,R=301]
+RewriteRule ^innstyle http://www.missioninnresort.com/marketing/wedding-showcase/  [L,R=301]
+RewriteRule ^trails the-resort/activities-recreation/trails-of-the-conquistadors.html  [L,R=301]
+RewriteRule ^unlimitedgolf http://www.missioninnresort.com/the-resort/orlando-vacation-packages/details/unlimited-golf-spectacular-package/ [L,R=301]
+RewriteRule ^unlimited-golf-offer marketing/unlimited-golf-offer.html [L,R=301]
+RewriteRule ^love/?$ valentines-at-mission-inn-resort.html [L,R=301]
+RewriteRule ^Love/?$ valentines-at-mission-inn-resort.html [L,R=301]
+RewriteRule ^meeting-special marketing/meeting-special.html [L,QSA]
+RewriteRule ^unlimited http://www.missioninnresort.com/marketing/unlimited.html [L,R=301]
+
+#Lodging
+RewriteRule ^orlando-golf-resort-accommodations the-resort/accommodations.html [L,R=301]
+
+#Golf
+
+RewriteRule ^orlando-golf-resort/orlando-golf-courses$ golf/orlando-golf-resort.html [L,R=301]
+RewriteRule ^orlando-golf-resort/orlando-golf-courses/el-campeon-golf-course golf/el-campeon-golf-course.html [L,R=301]
+RewriteRule ^orlando-golf-resort/orlando-golf-courses/las-colinas-golf-course golf/las-colinas-golf-course.html [L,R=301]
+RewriteRule ^orlando-golf-resort/orlando-golf-academies golf/orlando-golf-academies.html [L,R=301]
+RewriteRule ^orlando-golf-resort/orlando-tournament-golf golf/orlando-tournament-golf.html [L,R=301]
+RewriteRule ^orlando-golf-resort/golf-facts-fees golf/orlando-golf-resort.html [L,R=301]
+RewriteRule ^orlando-golf-resort/orlando-junior-golf-clinics golf/orlando-junior-golf-clinics.html [L,R=301]
+RewriteRule ^orlando-golf-resort/orlando-golf-courses/mission-inn-member-tee-times golf/mission-inn-public-tee-times/mission-inn-member-tee-times.html [L,R=301]
+RewriteRule ^orlando-golf-resort/orlando-golf-courses/mission-inn-public-tee-times golf/mission-inn-public-tee-times.html [L,R=301]
+RewriteRule ^orlando-golf-resort$ golf/mission-inn-history.html [L,R=301]
+
+
+#Specials
+RewriteRule ^orlando-vacation-packages the-resort/orlando-vacation-packages.html [L,R=301]
+
+#Dining
+RewriteRule ^dining/el-conquistador-restaurant$ dining/el-conquistador-restaurant.html [L,R=301]
+RewriteRule ^dining/nickers-clubhouse-restaurant$ dining/nickers-clubhouse-restaurant.html  [L,R=301]
+RewriteRule ^dining/la-hacienda-restaurant$ dining/la-hacienda-restaurant.html [L,R=301]
+RewriteRule ^dining/mission-inn-lounges$ dining/mission-inn-lounges.html [L,R=301]
+RewriteRule ^dining/orlando-buffet-holiday-dining$ dining/dining.html [L,R=301]
+
+
+#Spa might need some special rules
+RewriteRule ^spa$ spa/spa.html [L,R=301]
+
+#weddings
+
+
+RewriteRule ^wedding/orlando-outdoor-wedding-venues/orlando-outdoor-wedding-venues-plaza-de-la-fontana  weddings/orlando-outdoor-wedding-venues/orlando-outdoor-wedding-venues-plaza-de-la-fontana.html [L,R=301]
+RewriteRule ^wedding/orlando-outdoor-wedding-venues/orlando-outdoor-wedding-venues-plaza-de-las-palmas weddings/orlando-outdoor-wedding-venues/orlando-outdoor-wedding-venues-plaza-de-las-palmas.html [L,R=301]
+RewriteRule ^wedding/orlando-outdoor-wedding-venues/orlando-outdoor-wedding-venues-legends-courtyard weddings/orlando-outdoor-wedding-venues/orlando-outdoor-wedding-venues-legends-courtyard.html [L,R=301]
+RewriteRule ^wedding/orlando-outdoor-wedding-venues/orlando-outdoor-wedding-venues-the-marina weddings/orlando-outdoor-wedding-venues/orlando-outdoor-wedding-venues-the-marina.html [L,R=301]
+RewriteRule ^wedding/orlando-outdoor-wedding-venues weddings/orlando-outdoor-wedding-venues/ [L,R=301]
+RewriteRule ^wedding/orlando-wedding-reception-venues/orlando-wedding-reception-venues-legends-ballroom weddings/orlando-wedding-reception-venues/orlando-wedding-reception-venues-legends-ballroom.html [L,R=301]
+RewriteRule ^wedding/orlando-wedding-reception-venues/orlando-wedding-reception-venues-the-grand-ballroom weddings/orlando-wedding-reception-venues/orlando-wedding-reception-venues-the-grand-ballroom.html [L,R=301]
+RewriteRule ^wedding/orlando-wedding-reception-venues/orlando-wedding-reception-venues-la-hacienda weddings/orlando-wedding-reception-venues/orlando-wedding-reception-venues-la-hacienda.html [L,R=301]
+RewriteRule ^wedding/orlando-wedding-reception-venues/orlando-wedding-reception-venues-el-conquistador weddings/orlando-wedding-reception-venues/orlando-wedding-reception-venues-el-conquistador.html [L,R=301]
+RewriteRule ^wedding/orlando-wedding-reception-venues/orlando-wedding-reception-venues-plaza-de-las-palmas weddings/orlando-wedding-reception-venues/orlando-wedding-reception-venues-plaza-de-las-palmas.html [L,R=301]
+RewriteRule ^wedding/orlando-outdoor-wedding-venues/orlando-outdoor-wedding-venues-the-marina weddings/orlando-wedding-reception-venues/orlando-outdoor-reception-venues-the-marina.html [L,R=301]
+RewriteRule ^wedding/orlando-wedding-reception-venues weddings/orlando-wedding-reception-venues/ [L,R=301]
+RewriteRule ^wedding/orlando-garden-wedding-videos weddings/orlando-garden-wedding-videos.html [L,R=301]
+RewriteRule ^wedding/request-wedding-info weddings/request-wedding-info/ [L,R=301]
+RewriteRule ^weddings/reception-venue/la-hacienda.html weddings/orlando-wedding-reception-venues/orlando-wedding-reception-venues-la-hacienda.html [L,R=301]
+RewriteRule ^weddings/ceremony-venues/plaza-de-la-fontana.html weddings/orlando-outdoor-wedding-venues/orlando-outdoor-wedding-venues-plaza-de-la-fontana.html [L,R=301]
+RewriteRule ^weddings/reception-venue/el-conquistador.html weddings/orlando-wedding-reception-venues/orlando-wedding-reception-venues-el-conquistador.html  [L,R=301]
+RewriteRule ^weddings/reception-venue/the-grand-ballroom.html weddings/orlando-wedding-reception-venues/orlando-wedding-reception-venues-the-grand-ballroom.html  [L,R=301]
+RewriteRule ^weddings/ceremony-venues/ weddings/orlando-outdoor-wedding-venues/ [L,R=301]
+RewriteRule ^weddings/reception-venue/plaza-de-las-palmas.html weddings/orlando-wedding-reception-venues/orlando-wedding-reception-venues-plaza-de-las-palmas.html [L,R=301]
+
+RewriteRule ^wedding/wedding-blog category/wedding/ [L,R=301]
+
+
+
+RewriteRule ^wedding$ weddings/wedding.html [L,R=301]
+
+#meetings
+RewriteRule ^meetings/meeting-activities meetings/meetings.html [L,R=301]
+RewriteRule ^meetings/social-events meetings/event-facilities.html [L,R=301]
+RewriteRule ^meetings/social-events meetings/floorplans-capacities.html [L,R=301]
+#RewriteRule ^meetings/request-for-proposal meetings/request-for-proposal/ [L,R=301]
+
+
+#forms
+RewriteRule ^2013-02-23-12-46-03 contact/general-inquiry/ [L,R=301]
+
+
+
+#activities
+RewriteRule ^activities-recreation/mission-inn-history/weddings about/overview.html [L,R=301]
+RewriteRule ^activities-recreation/mission-inn-email-club contact/email-registration.html [L,R=301]
+RewriteRule ^activities-recreation/mission-inn-history/tennis tennis/orlando-championship-tennis.html  [L,R=301]
+RewriteRule ^activities-recreation/mission-inn-history/spa-marbella spa/spa.html [L,R=301]
+RewriteRule ^activities-recreation/mission-inn-history/latest-news / [L,R=301]
+RewriteRule ^activities-recreation/mission-inn-history/overview-fact-sheet the-resort/activities-recreation/ [L,R=301]
+
+
+RewriteRule ^activities-recreation/mission-inn-resort-activities/trap-and-skeet-shooting the-resort/activities-recreation/trap-and-skeet-shooting.html [L,R=301]
+RewriteRule ^activities-recreation/mission-inn-resort-activities/trails-of-the-conquistadors the-resort/activities-recreation/trails-of-the-conquistadors.html [L,R=301]
+RewriteRule ^activities-recreation/mission-inn-resort-activities/fitness-center the-resort/activities-recreation/el-corredor-fitness-center.html [L,R=301]
+RewriteRule ^activities-recreation/mission-inn-resort-activities/marina-del-rey the-resort/activities/marina-del-ray.html [L,R=301]
+RewriteRule ^activities-recreation/mission-inn-resort-activities he-resort/activities-recreation/marina-del-ray.html/ [L,R=301]
+
+RewriteRule ^activities-recreation/orlando-championship-tennis tennis/orlando-championship-tennis.html [L,R=301]
+RewriteRule ^20-orlando-outdoor-activities/89-racquet-restringing tennis/raquet-restringing.html [L,R=301]
+
+RewriteRule ^activities-recreation$ the-resort/activities-recreation/ [L,R=301]
+
+#misc
+RewriteRule ^newsroom / [L,R=301]
+
+RewriteRule ^real-estate/16-orlando-golf-community/41-area-info about/real-estate/mission-inn-real-estate.html [L,R=301]
+RewriteRule ^real-estate/16-orlando-golf-community/77-mission-inn-estate-homes about/real-estate/home-types/ [L,R=301]
+RewriteRule ^real-estate/20-orlando-outdoor-activities/91-tennis-clinics resort/activities-recreation/ [L,R=301]
+#RewriteRule ^real-estate about/real-estate/mission-inn-real-estate.html [L,R=301]
+
+RewriteRule ^16-orlando-golf-community/39-available-lots  about/real-estate/lots-available.html [L,R=301]
+RewriteRule ^16-orlando-golf-community/76-club-homes about/real-estate/home-types/club-homes.html [L,R=301]
+RewriteRule ^16-orlando-golf-community/40-home-types about/real-estate/home-types/ [L,R=301]
+RewriteRule ^16-orlando-golf-community/45-contact-mission-inn-real-estate about/real-estate/mission-inn-real-estate.html#realtors [L,R=301]
+RewriteRule ^mission-inn-careers about/careers.html [L,R=301]
+
+RewriteRule ^real-estate/mission-inn-real-estate.html  http://www.missioninnrealestate.com/about-us/ [L,NC,R=301]
+RewriteRule ^real-estate/current-listings.html http://www.missioninnrealestate.com/current-listings/ [L,NC,R=301]
+RewriteRule ^real-estate/home-types.*  http://www.missioninnrealestate.com/home-types/ [L,NC,R=301]
+RewriteRule ^real-estate/lots-available.html http://www.missioninnrealestate.com/lots-available/ [L,NC,R=301]
+RewriteRule ^real-estate/lifestyle-and-area.html  http://www.missioninnrealestate.com/lifestyle-area/ [L,NC,R=301] 
+#pdf
+RewriteRule ^images/pdf/NICKERs_DINNER.pdf assets/docs/pdf/nickers-dinner-menu.pdf [L,R=301]
+RewriteRule ^images/pdf/MissionInnResort_EmploymentApplication.pdf  assets/docs/pdf/MissionInnResort-EmploymentApplication.pdf [L,R=301]
+RewriteRule ^assets/images/media-kit/logos/-Logo-CMYK.eps about/media-kit.html [L,R=301]
+RewriteRule ^PDF/MI_WeddingGuide2014.pdf /assets/docs/MissionInnResort_WeddingGuide_2015.pdf [L,R=301]
+RewriteRule ^PDF/MI_WeddingGUIDE_NP_2014.pdf /assets/docs/MissionInnResort_WeddingGuide_2015_NP.pdf [L,R=301]
+
+RewriteRule ^[pP][gG][aA][pP][rR][oO][sS]/?$ /PGAPROS/index.html [L,R=301]
+RewriteRule ^centennial?$ /golf/golf-packages/details/100th-anniversary-centennial-golf-package [L,R=301]
+
+# The Friendly URLs part
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?q=$1 [L,QSA]
+
+
+
+
+
+
+
+# For servers that support output compression, you should pick up a bit of
+# speed by un-commenting the following lines.
+
+#php_flag zlib.output_compression On
+#php_value zlib.output_compression_level 5
+
+
+
+# The following directives stop screen flicker in IE on CSS rollovers. If
+# needed, un-comment the following rules. When they're in place, you may have
+# to do a force-refresh in order to see changes in your designs.
+<IfModule mod_expires.c>
+  ExpiresActive on
+	# media: images, video, audio
+	ExpiresByType image/gif                 "access plus 1 month"
+	ExpiresByType image/png                 "access plus 1 month"
+	ExpiresByType image/jpg                 "access plus 1 month"
+	ExpiresByType image/jpeg                "access plus 1 month"
+	ExpiresByType video/ogg                 "access plus 1 month"
+	ExpiresByType audio/ogg                 "access plus 1 month"
+	ExpiresByType video/mp4                 "access plus 1 month"
+	ExpiresByType video/webm                "access plus 1 month"
+
+	ExpiresByType application/pdf 			"access plus 1 month"
+	
+# webfonts
+  ExpiresByType font/truetype             "access plus 1 month"
+  ExpiresByType font/opentype             "access plus 1 month"
+  ExpiresByType application/x-font-woff   "access plus 1 month"
+  ExpiresByType image/svg+xml             "access plus 1 month"
+  ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
+  ExpiresByType font/truetype "access plus 1 month"
+  
+ # css and javascript
+  ExpiresByType text/css                  "access plus 1 hour"
+  ExpiresByType application/javascript    "access plus 2 months"
+  ExpiresByType text/javascript           "access plus 2 months"
+
+  <IfModule mod_headers.c>
+    Header append Cache-Control "public"
+  </IfModule> 
+  
+</IfModule>
+
+BrowserMatch "MSIE" brokenvary=1
+BrowserMatch "Mozilla/4.[0-9]{2}" brokenvary=1
+BrowserMatch "Opera" !brokenvary
+SetEnvIf brokenvary 1 force-no-vary
