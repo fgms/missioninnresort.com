@@ -1,0 +1,41 @@
+<div class="ruby-wrapper">
+
+    <button class="c-hamburger c-hamburger--htx visible-xs">
+
+        <span>Toggle Menu</span>
+
+    </button>
+
+    <ul class="ruby-menu">
+
+        {% for item in menu %}
+
+            <li>
+
+                <a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+
+                {% if item.get_children %}
+
+                    <ul>
+
+                    {% for subitem in item.get_children %}
+
+                        <li>
+
+                            <a target="{{ subitem.target }}" href="{{ subitem.link }}">{{ subitem.title }}</a>
+
+                        </li>
+
+                    {% endfor %}
+
+                    </ul>
+
+                {% endif %}
+
+            </li>
+
+        {% endfor %}
+
+    </ul>
+
+</div>

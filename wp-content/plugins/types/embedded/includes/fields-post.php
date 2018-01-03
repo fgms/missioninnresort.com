@@ -426,7 +426,7 @@ function wpcf_admin_post_meta_box( $post, $group, $echo = '', $open_style_editor
     $group_output = '';
     if ( !isset( $group['title'] ) ) {
         $temp = $group;
-        $group = '';
+        $group = array();
         $group['args'] = $temp;
         $group['id'] = $temp['slug'];
         $group['title'] = $temp['name'];

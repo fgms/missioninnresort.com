@@ -1,0 +1,79 @@
+.header {
+
+  position: relative;
+  height: 60px;
+
+  .header-logo {
+
+    display: inline-block;
+    position: absolute;
+    padding: 10px 40px;
+
+    background: #012840;
+
+    img {
+
+      height: 40px;
+      width: auto;
+
+    }
+
+  }
+
+  .header-buttons {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+
+    .header-button {
+
+      float: right;
+      width: 160px;
+      height: 60px;
+      line-height: 60px;
+      color: white;
+      font-family: $font-accent;
+      font-size: 0.875em;
+      text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
+      text-align: center;
+      text-transform: uppercase;
+
+    }
+
+    .header-buttons-phone {
+
+      color: #484848;
+
+    }
+
+    .header-buttons-tee {
+
+      background: #a68048;
+      color: white;
+
+      &:hover {
+
+        background: #af9164;
+        color: white;
+
+      }
+
+    }
+
+    .header-buttons-book {
+
+      background: #814e4e;
+      color: white;
+
+      &:hover {
+
+        background: #a06f6f;
+        color: white;
+
+      }
+
+    }
+
+  }
+
+}

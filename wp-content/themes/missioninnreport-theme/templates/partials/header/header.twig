@@ -1,0 +1,29 @@
+<header class="header" >
+
+    <nav id="nav-main" class="nav-main" role="navigation">
+
+        <div class="header-logo">
+
+            <img src="/wp-content/uploads/2017/12/logo-footer-mission-inn-resort.png">
+
+        </div>
+
+        {% include "partials/header/menu.twig" with {'menu': menu.get_items} %}
+
+        <div class="header-buttons">
+
+            <a class="header-button header-buttons-book">
+                book your stay
+            </a>
+            <a class="header-button header-buttons-tee">
+                book a tee time
+            </a>
+            <div class="header-button header-buttons-phone">
+                800.874.9053
+            </div>
+
+        </div>
+
+    </nav>
+
+</header>

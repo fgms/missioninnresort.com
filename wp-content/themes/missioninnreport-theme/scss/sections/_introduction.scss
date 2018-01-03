@@ -1,0 +1,35 @@
+.introduction {
+
+  height: 514px;
+  padding-top: 20px;
+  margin-top: 60px;
+  margin-bottom: 50px;
+  background-image: url('/wp-content/uploads/2017/12/logo-watermark-mission-inn-resort.png');
+  background-repeat: no-repeat;
+  background-position: center;
+
+  .introduction-title {
+
+    font-family: $font-accent;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 10px;
+
+  }
+
+  .introduction-subtitle {
+
+    font-family: $font-accent;
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 60px;
+
+  }
+
+  .introduction-container {
+
+    font-size: 1.3em;
+
+  }
+
+}

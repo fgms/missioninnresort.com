@@ -1,0 +1,62 @@
+﻿/*
+Theme Name: Modx Clone Ver 1.0
+Theme URI: http://wordpress.org/themes/blankslate
+Author: TidyThemes
+Author URI: http://tidythemes.com/
+Description: 
+Version: 4.0.2
+License: GNU General Public License
+License URI: https://www.gnu.org/licenses/gpl.html
+Tags: black, blue, white, light, one-column, fluid-layout, responsive-layout, custom-menu, featured-images, microformats, sticky-post, threaded-comments, translation-ready
+Text Domain: blankslate
+
+BlankSlate WordPress Theme © 2011-2014 TidyThemes
+BlankSlate is distributed under the terms of the GNU GPL
+*/
+
+/* Wedding Posts ==============================*/
+#wedding-date{}
+#wedding-title{	}
+#wedding-sub-title{	margin: -24px 0 24px;}
+#wedding-meta.entry-meta {margin-bottom: 24px;}
+.wedding-blog-info > span {display: block; width: 135px; float: left; font-weight: bold;}
+.wedding-post-pinit-wrapper{margin: 40px 0;}
+
+#wedding-pinit-gallery {
+	-moz-opacity: 0.00;
+	-khtml-opacity: 0.00;
+	opacity: 0.00;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha"(Opacity=0);
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+	filter:alpha(opacity=0);
+}
+
+.attachment-thumbnail.wp-post-image {width: 100%; max-width: 150px; height: auto;}
+/* Sidebar ====================================*/
+#sidebar {margin-bottom: 60px; padding-top: 82px;}
+/* Blue bold titles */
+#sidebar li .widget-title {
+	font-family: 'Raleway', sans-serif;
+	font-weight: bold;
+	font-style: normal;
+	color: #0e79a0;
+	font-size: 14px;
+	font-size: 1.4rem;
+	list-style-type: none;
+	border-bottom: 1px solid #eee;
+	padding: 4px 8px;
+	margin: 30px 0 0;
+	padding-left: 0
+}
+/* Large Italic titles */
+/*#sidebar li .widget-title {margin:8px 0}*/
+#sidebar ul ul li {  font-size: 14px; font-size: 1.4rem; list-style-type: none; border-bottom: 1px solid #eee; padding: 4px 0; }
+#sidebar ul ul li:last-of-type { border-bottom: none; }
+.widget-container a, .widget-container a:visited { color: #0e79a0;}
+.widget-container a:hover, .widget-container a:focus { color: #0e79a0; text-decoration: underline}
+ul.article-index {list-style: none; margin: 0 0 24px;padding: 0;}
+.article-index > li {padding-bottom: 38px; margin-bottom: 12px; border-bottom: 1px dotted #ccc;}
+.article-index > li:last-child {border-bottom: 0px;}
+.entry-meta {font-size : 14px; font-size: 1.4rem;  margin-bottom: 8px;}
+footer.entry-footer{font-size: 14px; font-size: 1.4rem;}
+section#comments{padding-top: 8px ; border-top: 1px dotted #ccc; margin-bottom: 8px; padding-bottom: 24px ; border-bottom: 1px dotted #ccc;}

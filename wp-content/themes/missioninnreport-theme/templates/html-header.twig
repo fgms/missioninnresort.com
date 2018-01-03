@@ -1,0 +1,36 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js ie ie6 lt-ie9 lt-ie8 lt-ie7" {{ site.language_attributes }}> <![endif]-->
+<!--[if IE 7]><html class="no-js ie ie7 lt-ie9 lt-ie8" {{ site.language_attributes }}> <![endif]-->
+<!--[if IE 8]><html class="no-js ie ie8 lt-ie9" {{ site.language_attributes }}> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" {{ site.language_attributes }}> <!--<![endif]-->
+<head>
+    <meta charset="{{ site.charset }}" />
+        <title>   
+            {% if wp_title %}
+                {{ wp_title }} - {{ site.name }}
+            {% else %}
+                {{ site.name }}
+            {% endif %}
+        </title>
+    <meta name="description" content="{{ site.description }}">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="author" href="{{ site.theme.link }}/humans.txt" />
+    <link rel="pingback" href="{{ site.pingback_url }}" />
+
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed|Playfair+Display" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="{{ site.theme.link }}/vendor/ruby/ruby-main.js"></script>
+    <script src="{{ site.theme.link }}/vendor/slick/slick.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ site.theme.link }}/vendor/font-awesome/font-awesome.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="{{ site.theme.link }}/vendor/ruby/ruby-main.css" type="text/css" media="all">
+    <link rel="stylesheet" href="{{ site.theme.link }}/vendor/ruby/ruby-responsive.css" type="text/css" media="all">
+    <link rel="stylesheet" href="{{ site.theme.link }}/vendor/ruby/ruby-transitions.css" type="text/css" media="all">
+    <link rel="stylesheet" href="{{ site.theme.link }}/vendor/slick/slick.css" type="text/css" media="all">
+
+    {{function('wp_head')}}

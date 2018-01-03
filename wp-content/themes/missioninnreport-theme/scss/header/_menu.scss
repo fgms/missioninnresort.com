@@ -1,0 +1,43 @@
+.header {
+
+  .ruby-wrapper {
+
+    background: #FFF;
+    height: 60px;
+
+    .ruby-menu {
+
+      text-align: center;
+
+      & > li {
+
+        float: none;
+        font-size: 14px;
+        display: inline-block;
+
+        & > a {
+
+          display: inline-block;
+
+          height: 60px;
+          line-height: 60px;
+          color: #484848;
+          font-size: .875em;
+          font-family: $font-body;
+
+        }
+
+        & > a:hover {
+
+          background: #012840;
+          color: #FFFFFF;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

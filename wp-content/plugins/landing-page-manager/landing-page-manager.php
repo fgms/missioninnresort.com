@@ -34,7 +34,9 @@ function register_landing_page_cp_type(){
     register_post_type('landing-page', $args);
     flush_rewrite_rules(false);
 }
+register_activation_hook( __FILE__, 'register_landing_page_cp_type' );
 add_action('init', 'register_landing_page_cp_type');
+
 //Custom Messages for Custom Post Type Landing Page
 function landing_page_cp_type_messages( $messages ) {
   $messages['Landing Page'] = array(

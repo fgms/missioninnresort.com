@@ -1,0 +1,44 @@
+<div id="homepage-hero-slideshow" class="hero-slideshow">
+
+    {% for special_offer in special_offers %}
+
+        <div class="hero-slideshow-item">
+
+            <img class="hero-slideshow-item-background" src="{{ attribute(special_offer,"wpcf-so-hero-background-image") }}">
+
+            <div class="hero-slideshow-item-overlay">
+
+                <div class="hero-slideshow-item-header">mission inn resort & club</div>
+
+                <div class="hero-slideshow-item-separator"></div>
+
+                <div class="hero-slideshow-item-title">{{  attribute(special_offer,"wpcf-so-hero-title") }}</div>
+
+                <div class="hero-slideshow-item-summary">{{  attribute(special_offer,"wpcf-so-hero-summary") }}</div>
+
+            </div>
+
+        </div>
+
+    {% endfor %}
+
+</div>
+<script>
+
+    $(document).ready( function() {
+
+        $("#homepage-hero-slideshow").slick({
+            autoplay: true,
+            autoplaySpeed: 10000,
+            pauseOnHover:false,
+            fade: true,
+            useTransform: true,
+            speed: 500,
+            cssEase: 'linear',
+            arrows: false,
+            zIndex: 50
+        });
+
+    });
+
+</script>

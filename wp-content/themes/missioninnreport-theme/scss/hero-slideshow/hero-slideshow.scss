@@ -1,0 +1,65 @@
+.hero-slideshow {
+
+  background: black;
+
+  .hero-slideshow-item {
+
+    position: relative;
+
+  }
+
+  .hero-slideshow-item-background {
+
+    position: relative;
+    width: 100%;
+    height: auto;
+
+  }
+
+  .hero-slideshow-item-overlay {
+
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: auto;
+
+    color: white;
+    font-family: $font-accent;
+
+    text-align: center;
+    text-transform: uppercase;
+
+  }
+
+  .hero-slideshow-item-header {
+
+    font-family: $font-body;
+    font-size: 1.9em;
+
+  }
+
+  .hero-slideshow-item-separator {
+
+    background: white;
+    width: 270px;
+    height: 1px;
+    margin: 15px auto;
+
+  }
+
+  .hero-slideshow-item-title {
+
+    font-size: 3em;
+
+  }
+
+  .hero-slideshow-item-summary {
+
+    font-size: 1.5em;
+    width: 990px;
+    margin: 10px auto;
+
+  }
+
+
+}

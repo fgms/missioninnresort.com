@@ -702,7 +702,7 @@ function wpcf_admin_fields_form() {
     if ( isset( $update['admin_styles'] ) ) {
         $admin_styles_value = $update['admin_styles'];
     }
-    $temp = '';
+    $temp = array();
 
     if ( $update ) {
         require_once WPCF_EMBEDDED_INC_ABSPATH . '/fields.php';
